@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="webPage.css">
+  
+
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+    <title>noFussSQL</title>
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-center text-center">
+          <div class="col-sm-4 align-items-center">
+            <div class="dropdown">
+              <button id="actionBtn" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Action
+              </button>         
+                <ul id="action" class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Select</a></li>
+                  <li><a class="dropdown-item"href="#">Insert</a></li>
+                  <li><a class="dropdown-item"href="#">Update</a></li>
+
+                  <div class="dropdown-divider"></div>
+                  <li><a id="create" class="dropdown-item" href="#">Create</a></li>
+                  <li><a id="delete" class="dropdown-item" href="#">Delete</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-sm-4 align-items-center">
+            <div class="dropdown">
+              <button id="tableBtn" class="btn btn-secondary dropdown-toggle tables" type="button" data-toggle="dropdown">Tables</button>        
+              <ul id="tbs" class="dropdown-menu tbList"></ul>
+            </div> 
+          </div>
+
+          <div class="col-sm-4 align-items-center">
+            <div class="dropdown">
+              <button id="conditionBtn" class="btn btn-secondary dropdown-toggle" type="button"  data-toggle="dropdown">Condition</button>
+              <ul id="condition" class="dropdown-menu">
+                <li><a id="firstNameChar" class="dropdown-item" href="#">First Name Char: </a></li>
+                <li><a id="lastNameChar" class="dropdown-item"href="#">Last Name Char: </a></li>
+                <li><a id="firstName" class="dropdown-item" href="#">First Name: </a></li>
+                <li><a id="lastName" class="dropdown-item" href="#">Last Name: </a></li>
+                <li><a id="name" class="dropdown-item" href="#">Name: </a></li>
+                <li><a id="clientID" class="dropdown-item" href="#">ID: </a></li>
+              </ul>
+            </div>
+          </div>
+    </div>
+
+    <div class="container">
+      <div class="linkedEventList mt-5"></div>
+      <!-- Create -->
+      <form class="form mt-5" method="POST">
+        <div id="newTable" style="width:760px; margin:0 auto;"></div>
+        <input class="mt-3 mb-5 create" type="submit" value="Submit" style="float: right; display: none;">
+      </form>
+      <!-- New rows -->
+      <form class="RowsTable mb-5" method="POST">
+        <div id="newRows" style="width:760px; margin:0 auto;"></div>
+        <input class="mt-3 mb-5 insert" type="submit" value="Insert" style="float: right; display: none;">
+      </form>
+
+      <div id="selectedTable" class="wrapper mt-3" style="width:359px; margin:0 auto;">
+      <div id="foreNameChar" style="width:350px; margin:0 auto;"></div>
+      <div id="surNameChar" style="width:350px; margin:0 auto;"></div>
+      <div id="foreName" style="width:350px; margin:0 auto;"></div>
+      <div id="surName" style="width:350px; margin:0 auto;"></div>
+      <div id="fullName" style="width:350px; margin:0 auto;"></div>
+      <div id="id" style="width:350px; margin:0 auto;"></div>
+    </div>
+      
+            
+    <script src="webPage.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./node_modules/bootbox/dist/bootbox.min.js"></script>
+</body>
+</html>
